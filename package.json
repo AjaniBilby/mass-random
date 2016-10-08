@@ -9,8 +9,10 @@
   "keywords": [
     "random",
     "statistics",
-    "library"
+    "library",
+    "dynamic"
   ],
+  "repository": "https://github.com/Hobgoblin101/mass-random",
   "author": "Ajani James Bilby",
   "license": "ISC"
 }
