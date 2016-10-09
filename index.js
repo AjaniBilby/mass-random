@@ -65,8 +65,7 @@ module.exports.statistics.prototype.randomItem = function(){
 
   //Get weightings
   for (let key in this.stats){
-    weightings[key] = this.weightingCalculator(this.stats[key]);
-    console.log(key+': '+weightings[key]);
+    weightings[key] = this.weightingCalculator(this.stats[key], key);
   }
 
   //Gather information
