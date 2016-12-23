@@ -1,29 +1,34 @@
-A quick and easy library that allows you to get random letters, ints, floats, strings, and also a random item from statistics  
+A quick and easy library that allows you to get random letters, ints, floats, strings, and also a random item from statistics.
 
 
-##Random Integer  
+## Setup
 ```
-  random.int(0,1)
-```  
-
-##Random Float  
+var random = require("mass-random");
 ```
-  random.int(0,1)
-```  
 
-##Random Letter  
-```
-  var letters = random.int(3);
-  //letters will be equal to a string with 3 random letters from the alphabet
-```  
+___
 
-##Random String  
-```
-  var string = random.string(10);
-  //string will a string 10 characters long with each character being a random number / letter
-```  
+## int(min, max)
+Will return a random integer between min and max.  
+**Note**: if only min is inputted min acts as max and min is equal to 0.
 
-##Random Item from stats  
+## float(min, max)  
+Will return a random float between min and max.
+**Note**: if only min is inputted min acts as max and min is equal to 0.
+
+## letter(numberOfLetters)
+Will return a random letter/s.
+
+## string(lengthOfString)
+Will return a random string of letters and numbers to the length inputted.
+
+## char(lengthOfString)
+Will return a random string of characters (including symbols).
+
+___
+
+
+## Random Item from stats  
 ```
   var stats = new random.statistics({
     bannana: 1,
@@ -42,7 +47,7 @@ A quick and easy library that allows you to get random letters, ints, floats, st
   var randomItem = stats.randomItem();
 ```
 
-##Random Item from stats with dynamic weighting  
+## Random Item from stats with dynamic weighting  
 ```
 var random = require('mass-random');
 

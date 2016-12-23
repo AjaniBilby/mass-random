@@ -1,8 +1,23 @@
 module.exports = {
   int: function (floor, ceil){
+    if (ceil === undefined && floor !== undefined){
+      ceil = floor;
+      floor = 0;
+    }else if (ceil === undefined && floor === undefined){
+      ceil = 1;
+      floor = 0;
+    }
   	return Math.round( (Math.random() * (ceil-floor)) +floor);
   },
   float: function (floor, ceil){
+    if (ceil === undefined && floor !== undefined){
+      ceil = floor;
+      floor = 0;
+    }else if (ceil === undefined && floor === undefined){
+      ceil = 1;
+      floor = 0;
+    }
+
   	return (Math.random()*(ceil-floor)) + floor;
   },
   letter: function (number){
@@ -19,6 +34,22 @@ module.exports = {
        }
        string += letter;
     }
+    return string;
+  },
+  char: function(number){
+    if (typeof(number) != 'number'){
+      number = 1;
+    }
+
+    var string = '';
+    for (let i=0; i<number; i++){
+      var out = '';
+      while (out == ''){
+        out = String.fromCharCode(module.exports.int(1000000000));
+      }
+      string += out;
+    }
+
     return string;
   },
   string: function(length){
